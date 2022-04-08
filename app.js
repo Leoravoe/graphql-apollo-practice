@@ -1,3 +1,4 @@
+/*
 const express = require('express');
 const { graphqlHTTP } = require('express-graphql');
 const { buildSchema } = require('graphql')
@@ -50,3 +51,4 @@ app.listen(4000,()=>{
 app.get('/',(req,res)=>{
     res.send("Hi There")
 });
+*/
