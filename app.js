@@ -1,3 +1,60 @@
+const express = require('express');
+const cors = require('cors');
+const { ApolloServer, gql } = require('apollo-server-express')
+const typeDefs = require('./graphQLSchema/schema')
+const resolvers = require('./resolvers/resolvers');
+
+
+(async () => {
+    const app = express();
+    const server = new ApolloServer({
+        typeDefs,
+        resolvers
+    })
+    app.use(cors());
+    await server.start()
+    server.applyMiddleware({app})
+
+    app.listen(4000, ()=> console.log('Server started'))
+})()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /*
 const express = require('express');
 const { graphqlHTTP } = require('express-graphql');
